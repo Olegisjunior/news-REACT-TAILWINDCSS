@@ -1,5 +1,6 @@
 import { ImageItem } from "../ImageItem/ImageItem";
 import { formatTimeAgo } from "../helpers/formatTimeAgo";
+import withSkeleton from "../helpers/hocs/withSkeleton";
 
 export const NewsBanner = ({ item }) => {
   return (
@@ -13,6 +14,8 @@ export const NewsBanner = ({ item }) => {
   );
 };
 
-export default NewsBanner;
+const NewsBannerWithSkeleton = withSkeleton(NewsBanner, "banner", 1);
+
+export default NewsBannerWithSkeleton;
 
 //18:20 / 37:01
