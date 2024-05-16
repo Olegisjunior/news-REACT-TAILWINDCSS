@@ -7,6 +7,13 @@ export const Categories = ({
 }) => {
   return (
     <div className={classes.categories}>
+      <button
+        onClick={() => setSelectedCategories(null)}
+        className={!selectedCategories ? classes.active : classes.item}
+      >
+        All
+      </button>
+
       {categories.map((category) => {
         return (
           <button
